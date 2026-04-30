@@ -2,13 +2,20 @@
 {
 "title": "親子性教育工作坊",
 "date": "2026-05-10",
-"image": "images/event1.jpg",
-"link": "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+"desc": "透過互動活動學習健康性觀念",
+"image": "images/events/event1.jpg",
+"link": "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform",
+"status": "upcoming"
 },
 {
-"title": "學校講座",
-"date": "2026-06-01",
-"image": "images/event2.jpg",
-"link": "#"
+"title": "教師培訓講座",
+"date": "2026-03-01",
+"desc": "提升教學技巧與課程設計",
+"image": "images/events/event2.jpg",
+"gallery": [
+"images/events/e2_1.jpg",
+"images/events/e2_2.jpg"
+],
+"status": "past"
 }
 ]
