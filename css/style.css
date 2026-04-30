@@ -1,56 +1,33 @@
-body { margin:0; font-family: Arial; background:#f9f9f9; }
-
-header { background:#ff4d79; color:white; padding:20px; text-align:center; }
-
-nav {
-background:white;
-padding:10px;
-text-align:center;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+/* 手機 menu */
+.menu-toggle {
+display:none;
+font-size:24px;
+cursor:pointer;
 }
 
-nav a {
-margin:0 10px;
-text-decoration:none;
-color:#333;
-font-weight:bold;
+@media (max-width:768px){
+nav a { display:none; }
+.menu-toggle { display:block; }
+nav.active a {
+display:block;
+margin:10px 0;
+}
 }
 
-.hero {
-text-align:center;
-padding:40px 20px;
-}
-
-.hero img { max-width:200px; }
-
-.container {
-padding:20px;
-max-width:1000px;
-margin:auto;
-}
-
-.card {
-background:white;
-padding:20px;
-margin:15px 0;
+/* 活動卡片 */
+.event-card img {
+width:100%;
 border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card h2 { color:#ff4d79; }
-
-.button {
-display:inline-block;
-padding:10px 15px;
-background:#ff4d79;
-color:white;
-text-decoration:none;
-border-radius:5px;
+/* gallery */
+.gallery {
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+gap:10px;
 }
 
-footer {
-background:#333;
-color:white;
-text-align:center;
-padding:15px;
+.gallery img {
+width:100%;
+border-radius:8px;
 }
