@@ -3,20 +3,141 @@
 <html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
-<title>會訊</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSSE會訊</title>
+
+<style>
+body { margin:0; font-family: Arial; background:#f5f5f5; }
+
+header {
+  background:#ff4d79;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+nav {
+  background:white;
+  padding:10px;
+  text-align:center;
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+}
+
+.container {
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  margin:15px 0;
+  border-radius:10px;
+  text-align:center;
+}
+
+h2 { color:#ff4d79; }
+
+.cover {
+  width:100%;
+  max-width:500px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.button {
+  display:inline-block;
+  padding:10px 15px;
+  background:#ff4d79;
+  color:white;
+  border-radius:5px;
+  text-decoration:none;
+  margin-top:10px;
+}
+
+select {
+  padding:8px;
+  margin-top:10px;
+}
+</style>
+
+<script>
+function openOldNewsletter(){
+  var file = document.getElementById("oldSelect").value;
+  if(file){
+    window.open(file, "_blank");
+  }
+}
+</script>
+
 </head>
 
-<body style="font-family:Arial">
+<body>
 
+<header>
 <h1>MSSE會訊</h1>
+<p>了解我們的最新動態與資訊</p>
+</header>
 
-<h2>最新一期</h2>
-<a href="docs/newsletter10.pdf">下載第10期</a>
+<nav>
+<a href="index.html">首頁</a>
+<a href="about.html">關於我們</a>
+<a href="events.html">活動</a>
+<a href="newsletter.html">會訊</a>
+<a href="membership.html">加入會員</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
 
-<h2>過往會訊</h2>
-<a href="docs/newsletter9.pdf">下載第9期</a>
+<div class="container">
 
-<br><br> <a href="index.html">返回首頁</a>
+<!-- 最新一期 -->
+
+<div class="card">
+<h2>📌 最新一期</h2>
+
+<a href="docs/newsletter11.pdf" target="_blank">
+<img src="images/newsletter_latest.jpg" class="cover">
+</a>
+
+<p>第十一期（2023.01）十周年紀念特刊</p>
+
+<a href="docs/newsletter11.pdf" class="button" target="_blank">下載 PDF</a>
+
+</div>
+
+<!-- 舊會訊 -->
+
+<div class="card">
+<h2>📚 過往會訊</h2>
+
+<select id="oldSelect">
+<option value="">請選擇期數</option>
+<option value="docs/newsletter10.pdf">第十期</option>
+<option value="docs/newsletter9.pdf">第九期</option>
+<option value="docs/newsletter8.pdf">第八期</option>
+<option value="docs/newsletter7.pdf">第七期</option>
+<option value="docs/newsletter6.pdf">第六期</option>
+<option value="docs/newsletter5.pdf">第五期</option>
+<option value="docs/newsletter4.pdf">第四期</option>
+<option value="docs/newsletter3.pdf">第三期</option>
+<option value="docs/newsletter2.pdf">第二期</option>
+<option value="docs/newsletter1.pdf">第一期</option>
+</select>
+
+<br>
+
+<button class="button" onclick="openOldNewsletter()">開啟會訊</button>
+
+</div>
+
+</div>
 
 </body>
 </html>

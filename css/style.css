@@ -18,6 +18,8 @@ margin:10px 0;
 .event-card img {
 width:100%;
 border-radius:10px;
+height:200px;
+object-fit:cover;
 }
 
 /* gallery */
@@ -30,4 +32,130 @@ gap:10px;
 .gallery img {
 width:100%;
 border-radius:8px;
+}
+
+/* Banner */
+.site-header {
+background: linear-gradient(90deg, #ff4d79, #ff7a9c);
+color:white;
+padding:20px 30px;  /* 🔥 高度增加 */
+}
+
+/* 內容排版 */
+.header-inner {
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* LOGO（放大） */
+.logo {
+width:90px;   /* 🔥 比之前大 */
+background:white;
+padding:6px;
+border-radius:10px;
+}
+
+/* 標題 */
+.header-text h1 {
+margin:0;
+font-size:28px;  /* 🔥 放大 */
+letter-spacing:1px;
+}
+
+/* 副標 */
+.header-text p {
+margin:6px 0 0;
+font-size:17px;
+opacity:0.95;
+}
+
+/* 手機版 */
+@media (max-width:768px){
+.header-inner {
+flex-direction:column;
+text-align:center;
+}
+
+.logo {
+width:110px; /* 手機更大 */
+}
+
+.header-text h1 {
+font-size:26px;
+}
+}
+
+/* 基本排版 */
+body {
+font-family: Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+/* 導航 */
+nav {
+background:white;
+padding:10px;
+text-align:center;
+}
+
+nav a {
+margin:0 10px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover {
+color:#ff4d79;
+}
+
+/* 容器 */
+.container {
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* 卡片（恢復） */
+.card {
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 標題 */
+h2 {
+color:#ff4d79;
+}
+
+/* 圖片 */
+img {
+max-width:100%;
+border-radius:10px;
+}
+
+/* 文字 */
+p {
+line-height:1.6;
+}
+
+/* 成立緣由（恢復 highlight） */
+.highlight {
+background:#ffe6ec;
+border-left:6px solid #ff4d79;
+padding:15px;
+}
+
+.highlight h2 {
+color:#cc3366;
+}
+
+.highlight p {
+font-size:15px;
 }
