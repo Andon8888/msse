@@ -87,5 +87,24 @@ function openOldNewsletter(){
 
 </div>
 
+<script>
+const links = document.querySelectorAll("nav a");
+const current = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  const href = link.getAttribute("href");
+
+  if(href === current){
+    link.classList.add("active");
+  }
+
+  // 🔥 特別處理 event-detail
+  if(current.startsWith("event-detail") && href === "events.html"){
+    link.classList.add("active");
+  }
+});
+</script>
+
+
 </body>
 </html>
