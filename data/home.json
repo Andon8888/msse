@@ -14,11 +14,13 @@
 "events": [
 {
 "title": "親子性教育工作坊",
-"image": "images/event1.jpg"
+"image": "images/event1.jpg",
+ "link": "event-detail.html?id=event1"
 },
 {
 "title": "教師培訓講座",
-"image": "images/event2.jpg"
+"image": "images/event2.jpg",
+ "link": "event-detail.html?id=event2"
 }
 ],
 
