@@ -6,67 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MSSE會訊</title>
 
-<style>
-body { margin:0; font-family: Arial; background:#f5f5f5; }
 
-header {
-  background:#ff4d79;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-nav {
-  background:white;
-  padding:10px;
-  text-align:center;
-}
-
-nav a {
-  margin:0 10px;
-  text-decoration:none;
-  color:#333;
-  font-weight:bold;
-}
-
-.container {
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-
-.card {
-  background:white;
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
-  text-align:center;
-}
-
-h2 { color:#ff4d79; }
-
-.cover {
-  width:100%;
-  max-width:500px;
-  border-radius:10px;
-  cursor:pointer;
-}
-
-.button {
-  display:inline-block;
-  padding:10px 15px;
-  background:#ff4d79;
-  color:white;
-  border-radius:5px;
-  text-decoration:none;
-  margin-top:10px;
-}
-
-select {
-  padding:8px;
-  margin-top:10px;
-}
-</style>
 
 <script>
 function openOldNewsletter(){
@@ -81,16 +21,24 @@ function openOldNewsletter(){
 
 <body>
 
-<header>
-<h1>MSSE會訊</h1>
-<p>了解我們的最新動態與資訊</p>
+<link rel="stylesheet" href="css/style.css">
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="images/logo.jpg" class="logo">
+    <div class="header-text">
+      <h1>澳門性教育學會 MSSE</h1>
+      <p>愛的教育 · 自尊自重 · 愛己愛人</p>
+    </div>
+  </div>
 </header>
 
 <nav>
 <a href="index.html">首頁</a>
 <a href="about.html">關於我們</a>
-<a href="events.html">活動</a>
-<a href="newsletter.html">會訊</a>
+<a href="constitution.html">章程架構</a>
+<a href="events.html">最新活動</a>
+<a href="newsletter.html">學會會訊</a>
 <a href="membership.html">加入會員</a>
 <a href="contact.html">聯絡我們</a>
 </nav>
@@ -99,7 +47,7 @@ function openOldNewsletter(){
 
 <!-- 最新一期 -->
 
-<div class="card">
+<div class="card news-center">
 <h2>📌 最新一期</h2>
 
 <a href="docs/newsletter11.pdf" target="_blank">
@@ -114,7 +62,7 @@ function openOldNewsletter(){
 
 <!-- 舊會訊 -->
 
-<div class="card">
+<div class="card news-center">
 <h2>📚 過往會訊</h2>
 
 <select id="oldSelect">

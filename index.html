@@ -3,24 +3,26 @@
 <html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MSSE 澳門性教育學會</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- Banner -->
+
 <header class="site-header">
   <div class="header-inner">
-  <img src="images/logo.jpg" class="logo">
-
-  <div class="header-text">
-    <h1>澳門性教育學會 MSSE</h1>
-    <p>愛的教育 · 自尊自重 · 愛己愛人</p>
+    <img src="images/logo.jpg" class="logo">
+    <div class="header-text">
+      <h1>澳門性教育學會 MSSE</h1>
+      <p>愛的教育 · 自尊自重 · 愛己愛人</p>
+    </div>
   </div>
-</div>
-
 </header>
 
+<!-- Menu -->
 
 <nav>
 <a href="index.html">首頁</a>
@@ -34,28 +36,41 @@
 
 <div class="container">
 
+<!-- ❤️ Hero -->
+
+<div class="hero" id="hero"></div>
+
+<!-- 最新消息 -->
+
 <div class="card">
 <h2>📢 最新消息</h2>
-<p>性教育親子講座（2026年5月）</p>
-<p>教師培訓工作坊（2026年6月）</p>
+<div id="news"></div>
 </div>
 
-<div class="card">
-<h2>🎯 活動</h2>
-<p>親子性教育工作坊</p>
-</div>
+<!-- 活動 -->
 
 <div class="card">
-<h2>📸 性教育大使</h2>
-<img src="images/MSSE_IP.jpg">
+<h2>🎯 精選活動</h2>
+<div class="event-grid" id="events"></div>
 </div>
 
-<div class="card">
-<h2>❤️ 會徽理念</h2>
-<img src="images/MSSE_LOGO_Mean.jpg">
-</div>
+<!-- 理念 -->
+
+<div class="card highlight" id="idea"></div>
+
+<!-- IP -->
+
+<div class="card ip-home" id="ip"></div>
+
 
 </div>
 
 </body>
+
+<script src="js/home.js"></script>
+
 </html>
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<title>活動詳情</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container" id="detail"></div>
+
+<script>
+var data = [
+  {
+    id: "event1",
+    title: "親子性教育工作坊",
+    date: "2026-05-10",
+    desc: "透過互動活動學習健康性觀念",
+    image: "images/events/event1.jpg"
+  },
+  {
+    id: "event2",
+    title: "教師培訓講座",
+    date: "2026-03-01",
+    desc: "提升教學技巧與課程設計",
+    image: "images/events/event2.jpg"
+  }
+];
+
+var params = new URLSearchParams(window.location.search);
+var id = params.get("id");
+
+for(var i=0;i<data.length;i++){
+  if(data[i].id === id){
+    var e = data[i];
+
+    var html = "";
+    html += "<h2>" + e.title + "</h2>";
+    html += "<img src='" + e.image + "'>";
+    html += "<p>" + e.date + "</p>";
+    html += "<p>" + e.desc + "</p>";
+
+    document.getElementById("detail").innerHTML = html;
+  }
+}
+</script>
+
+</body>
+</html>
