@@ -59,26 +59,24 @@
 <tr><td></td><td>副會長</td><td>陳敬蓮</td></tr>
 
 <tr><td>理事會</td><td>理事長</td><td>梁美珊</td></tr>
-<tr><td></td><td>副理事長</td><td>余嘉雯</td></tr>
-<tr><td></td><td>秘書長</td><td>黃潔如</td></tr>
-<tr><td></td><td>副秘書長</td><td>黃婷</td></tr>
+<tr><td></td><td>副理事長</td><td>梁嘉敏</td></tr>
+<tr><td></td><td>秘書長</td><td>溫綺妍</td></tr>
+<tr><td></td><td>副秘書長</td><td>黃潔如</td></tr>
 <tr><td></td><td>司庫</td><td>林慧婷</td></tr>
 
 <tr><td></td><td>理事</td>
 <td>
-朱少興<br>
-楊龍興<br>
-黃馨慧<br>
-梁倩雅<br>
+余嘉雯<br>
 霍柳嫦<br>
-溫綺妍<br>
-梁嘉敏<br>
-黃小燕
+黃婷<br>
+黃小燕<br>
+黃馨慧<br>
+楊龍興<br>
 </td></tr>
 
-<tr><td>監事會</td><td>監事長</td><td>周艷韞</td></tr>
-<tr><td></td><td>副監事長</td><td>李玉銀</td></tr>
-<tr><td></td><td>監事</td><td>張詠君</td></tr>
+<tr><td>監事會</td><td>監事長</td><td>李玉銀</td></tr>
+<tr><td></td><td>副監事長</td><td>周艷韞</td></tr>
+<tr><td></td><td>監事</td><td>朱少興</td></tr>
 
 </table>
 
@@ -113,6 +111,23 @@
 </div>
 
 </div>
+<script>
+const links = document.querySelectorAll("nav a");
+const current = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  const href = link.getAttribute("href");
+
+  if(href === current){
+    link.classList.add("active");
+  }
+
+  // 🔥 特別處理 event-detail
+  if(current.startsWith("event-detail") && href === "events.html"){
+    link.classList.add("active");
+  }
+});
+</script>
 
 </body>
 </html>
