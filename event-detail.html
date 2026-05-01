@@ -3,10 +3,38 @@
 <html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>活動詳情</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+<!-- Banner -->
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="images/logo.jpg" class="logo">
+    <div class="header-text">
+      <h1>澳門性教育學會 MSSE</h1>
+      <p>愛的教育 · 自尊自重 · 愛己愛人</p>
+    </div>
+  </div>
+</header>
+
+<!-- Menu -->
+
+<nav>
+<a href="index.html">首頁</a>
+<a href="about.html">關於我們</a>
+<a href="constitution.html">章程架構</a>
+<a href="events.html">最新活動</a>
+<a href="newsletter.html">學會會訊</a>
+<a href="membership.html">加入會員</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
+
+<!-- 內容 -->
 
 <div class="container" id="detail"></div>
 
@@ -17,14 +45,18 @@ var data = [
     title: "親子性教育工作坊",
     date: "2026-05-10",
     desc: "透過互動活動學習健康性觀念",
-    image: "images/events/event1.jpg"
+    image: "images/events/event1.jpg",
+    link: "https://forms.gle/xxxx",
+    status: "upcoming"
   },
   {
     id: "event2",
     title: "教師培訓講座",
     date: "2026-03-01",
     desc: "提升教學技巧與課程設計",
-    image: "images/events/event2.jpg"
+    image: "images/events/event2.jpg",
+    link: "https://forms.gle/xxxx",
+    status: "past"
   }
 ];
 
@@ -37,13 +69,34 @@ for(var i=0;i<data.length;i++){
 
     var html = "";
     html += "<h2>" + e.title + "</h2>";
-    html += "<img src='" + e.image + "'>";
-    html += "<p>" + e.date + "</p>";
+    html += "<img src='" + e.image + "' class='poster'>";
+    html += "<p>📅 " + e.date + "</p>";
     html += "<p>" + e.desc + "</p>";
 
+   if(e.status === "upcoming" && e.link){
+html += "<br><a href='" + e.link + "' class='button' target='_blank'>立即報名</a>";
+}
+html += "<br><br><a href='events.html' class='button'>← 返回活動</a>";
     document.getElementById("detail").innerHTML = html;
   }
 }
+</script>
+<script>
+const links = document.querySelectorAll("nav a");
+const current = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  const href = link.getAttribute("href");
+
+  if(href === current){
+    link.classList.add("active");
+  }
+
+  // 🔥 特別處理 event-detail
+  if(current.startsWith("event-detail") && href === "events.html"){
+    link.classList.add("active");
+  }
+});
 </script>
 
 </body>
