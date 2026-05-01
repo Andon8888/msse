@@ -16,10 +16,11 @@ document.getElementById('news').innerHTML = newsHTML;
 // EVENTS
 let eventHTML = '';
 data.events.forEach(e=>{
-eventHTML += `       <div class="event-item">         <img src="${e.image}">         <p>${e.title}</p>       </div>
-    `;
+eventHTML += `     <a href="${e.link}" style="text-decoration:none;color:inherit;">       <div class="event-item">         <img src="${e.image}">         <p>${e.title}</p>       </div>     </a>
+  `;
 });
 document.getElementById('events').innerHTML = eventHTML;
+
 
 // IDEA
 document.getElementById('idea').innerHTML = `     <h2>我們的理念</h2>     <p>${data.idea}</p>
@@ -30,3 +31,7 @@ document.getElementById('ip').innerHTML = `     <h2>性教育大使</h2>     <im
   `;
 
 });
+
+
+
+
